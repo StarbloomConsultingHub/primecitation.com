@@ -83,6 +83,8 @@ const siteUrl = canonicalURL ?? Astro.url.href;
     })} />
   </head>
   <body>
-    <slot />
+    <div class="mx-auto max-w-7xl">
+      <slot />
+    </div>
   </body>
 </html>
