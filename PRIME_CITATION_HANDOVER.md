@@ -59,11 +59,33 @@ Feed the existing Apex Signal copy to Grok and have it rewrite for Prime Citatio
 - **Medium:** Darren's Medium handle needed
 
 ## Where to Pick Up
-1. Start by feeding this whole document + the current page copy to Grok
-2. Have Grok produce: rewritten copy, JSON-LD blocks, llms.txt content, blog section plan
-3. Build blog skeleton and insert structured data
-4. Wire in social links and Darren's bio
-5. Push to GitHub, Vercel auto-deploys
+1. ~~Feed to Grok: rewritten copy, JSON-LD blocks, llms.txt content, blog section plan~~ ✅ Done
+2. ~~Build blog skeleton and insert structured data~~ ✅ Done
+3. ~~Wire in social links and Darren's bio~~ ✅ Done
+4. ~~Push to GitHub~~ ✅ Done (committed and pushed, Vercel auto-deploys)
+
+## What's Left
+1. **Grok rewrite the copy** — Rewrite `src/pages/index.astro` copy to remove all Starbloom references, sharpen value prop, add Darren's bio section
+2. **Logo** — Need a Prime Citation logo (use Grok Imagine prompt below)
+3. **Stripe product URL** — Wire in actual Stripe product URL to subscribe buttons
+4. **Branding direction** — Decide if you want the current navy/gold or different palette before Grok rewrite
+5. **LinkedIn company page** — @Starbloom_AI handle used for X; prime-citation LinkedIn page may need creation
+
+## Grok Imagine Logo Prompt
+```
+Design a minimalist wordmark logo for "PRIME CITATION" in bold gold (#e6b800) on a dark navy (#0a1628) background. Clean, authoritative, professional. No icon needed. Think legal/consulting firm meets tech agency. Simple and memorable.
+```
+
+## What Was Done This Session (2026-06-04)
+- ✅ 7 JSON-LD schemas injected: Organization, WebSite, Product, FAQPage, BreadcrumbList, Person (Darren)
+- ✅ `/blog` landing page created with featured Medium article
+- ✅ `public/llms.txt` created for AI crawlers
+- ✅ OG default image generated and placed at `public/og-default.jpg`
+- ✅ Social links in footer: GitHub, Medium, X, LinkedIn (same handles as existing)
+- ✅ Footer says "A Kelly Green Holdings company"
+- ✅ Clean build (2.93s, zero errors)
+- ✅ `dist/` and `.vercel/` removed from git tracking
+- ✅ Pushed to GitHub — Vercel auto-deploys
 
 ## Important Rules
 - **No hyphens in sales copy** — use em dashes, parentheses, or rephrase
