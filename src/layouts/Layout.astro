@@ -6,9 +6,10 @@ export interface Props {
   description: string;
   ogImage?: string;
   canonicalURL?: string;
+  faq?: Array<{ question: string; answer: string }>;
 }
 
-const { title, description, ogImage = '/og-default.jpg', canonicalURL } = Astro.props;
+const { title, description, ogImage = '/og-default.jpg', canonicalURL, faq } = Astro.props;
 const siteUrl = canonicalURL ?? Astro.url.href;
 ---
 
@@ -33,12 +34,12 @@ const siteUrl = canonicalURL ?? Astro.url.href;
     <meta name="twitter:description" content={description} />
     <link rel="canonical" href={siteUrl} />
 
-    <!-- Fonts: Inter (body) + DM Sans (headings - free alternative to Satoshi) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- Organization -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -62,6 +63,7 @@ const siteUrl = canonicalURL ?? Astro.url.href;
       ]
     })} />
 
+    <!-- WebSite -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -69,6 +71,7 @@ const siteUrl = canonicalURL ?? Astro.url.href;
       "url": "https://primecitation.com"
     })} />
 
+    <!-- Product -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Product",
@@ -82,6 +85,47 @@ const siteUrl = canonicalURL ?? Astro.url.href;
         "availability": "https://schema.org/InStock"
       }
     })} />
+
+    <!-- Service -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "White-Label AEO Audit Reports",
+      "description": "Monthly white-label AEO audits for agencies: full site crawl, Schema.org JSON-LD audit, entity coverage mapping, heading structure review, Core Web Vitals, content hierarchy, competitive benchmarking, and deployable assets.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Prime Citation",
+        "url": "https://primecitation.com"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "SEO agencies and digital marketing agencies"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "997",
+        "highPrice": "1497",
+        "offerCount": "2",
+        "availability": "https://schema.org/InStock"
+      }
+    })} />
+
+    <!-- FAQPage (injected per-page via faq prop) -->
+    {faq && faq.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faq.map(f => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      })} />
+    )}
   </head>
   <body>
     <slot />

@@ -3,11 +3,21 @@
 // Built by an operator. Delivered invisible.
 
 import Layout from '../layouts/Layout.astro';
+
+const faqEntries = [
+  { question: "Can I resell these reports under my own brand?", answer: "Yes. PrimeCitation is explicitly designed for agency white-label use. The PDF ships clean with no PrimeCitation branding in the body. You add your strategic recommendations, bill your client at your own rate, and we remain your technical engine." },
+  { question: "What does a full audit include?", answer: "Every report includes: full site crawl with technical issue analysis, Schema.org JSON-LD audit across all relevant entity types, entity coverage mapping, semantic HTML5 and heading structure review, Core Web Vitals snapshot with targeted recommendations, content hierarchy and topical alignment analysis, competitive entity benchmarking against top competitors, and ready-to-deploy JSON-LD markup with prioritized content briefs." },
+  { question: "What kind of agencies is this for?", answer: "Established SEO and digital marketing agencies that want to add a high-quality AEO capability to their existing service offerings. You have existing clients you trust. We help you serve them at a higher level without hiring or disrupting your current operation." },
+  { question: "How many reports can I get per month?", answer: "Your subscription includes up to 5 full reports per month. Additional reports are available on request." },
+  { question: "How does the white-label work?", answer: "The PDF and all technical assets you receive carry no PrimeCitation branding. You can add your own logo, deliver them as-is, or enhance them with your own strategic recommendations. To your clients, the work appears to come entirely from your agency." },
+  { question: "Is this replacing SEO?", answer: "No. AEO is still a new channel and most of the signals overlap with what you already do. PrimeCitation focuses on the foundational entity and structured data layer that AI-driven search now surfaces. It strengthens and extends what you already deliver." }
+];
 ---
 
 <Layout
   title="White-Label AEO Reports for Agencies"
   description="PrimeCitation delivers the foundational technical and entity work that modern search requires. Clean, unbranded reports and deployable assets under your brand."
+  faq={faqEntries}
 >
 
 <!-- ═══ NAV ═══ -->
@@ -173,6 +183,37 @@ import Layout from '../layouts/Layout.astro';
   </div>
 </section>
 
+<!-- ═══ FOUNDER ═══ -->
+<section id="about" class="w-full py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6" style="font-family: 'DM Sans', sans-serif;">
+        Built by <span class="text-grad-bronze">an operator.</span>
+      </h2>
+      <div class="card-surface p-8 md:p-10">
+        <div class="w-16 h-16 rounded-full bg-bronze-500/20 flex items-center justify-center mx-auto mb-4">
+          <span class="text-2xl font-black text-bronze-400">DK</span>
+        </div>
+        <p class="text-sm text-stone-400 leading-relaxed max-w-xl mx-auto">
+          PrimeCitation was founded by <strong class="text-cream-50">Darren Kelly</strong>, an operator who built and ran
+          the systems that keep a 50-person, 600+ lb monthly production operation running on zero downtime.
+          Every SOP, every schedule, every quality check was written from scratch.
+        </p>
+        <p class="text-sm text-stone-400 leading-relaxed max-w-xl mx-auto mt-3">
+          The AEO workflow here is the same approach: build the underlying system so thoroughly
+          that the output is consistent, defensible, and deliverable under your brand. No theory.
+          No fluff. Just repeatable technical work that earns trust from both machines and humans.
+        </p>
+        <div class="flex flex-wrap justify-center gap-5 mt-6 text-xs text-stone-500">
+          <a href="https://github.com/StarbloomConsultingHub" target="_blank" rel="noopener noreferrer" class="hover:text-bronze-400 transition-colors">GitHub</a>
+          <a href="https://medium.com/@darrenkelly_90696" target="_blank" rel="noopener noreferrer" class="hover:text-bronze-400 transition-colors">Medium</a>
+          <a href="https://x.com/Starbloom_AI" target="_blank" rel="noopener noreferrer" class="hover:text-bronze-400 transition-colors">X</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ PRICING ═══ -->
 <section id="pricing" class="w-full bg-navy-900/30 border-y border-white/5 py-20">
   <div class="max-w-7xl mx-auto px-4">
@@ -264,20 +305,15 @@ import Layout from '../layouts/Layout.astro';
         Common <span class="text-grad-bronze">Questions</span>
       </h2>
       <div class="space-y-4">
-        {[
-          ["Can I resell these reports under my own brand?", "Yes. PrimeCitation is explicitly designed for agency white-label use. The PDF ships clean with no PrimeCitation branding in the body. You add your strategic recommendations, bill your client at your own rate, and we remain your technical engine."],
-          ["What does a full audit include?", "Every report includes: full site crawl with technical issue analysis, Schema.org JSON-LD audit across all relevant entity types, entity coverage mapping, semantic HTML5 and heading structure review, Core Web Vitals snapshot with targeted recommendations, content hierarchy and topical alignment analysis, competitive entity benchmarking against top competitors, and ready-to-deploy JSON-LD markup with prioritized content briefs."],
-          ["What kind of agencies is this for?", "Established SEO and digital marketing agencies that want to add a high-quality AEO capability to their existing service offerings. You have existing clients you trust. We help you serve them at a higher level without hiring or disrupting your current operation."],
-          ["How many reports can I get per month?", "Your subscription includes up to 5 full reports per month. Additional reports are available on request."],
-          ["How does the white-label work?", "The PDF and all technical assets you receive carry no PrimeCitation branding. You can add your own logo, deliver them as-is, or enhance them with your own strategic recommendations. To your clients, the work appears to come entirely from your agency."],
-          ["Is this replacing SEO?", "No. AEO is still a new channel and most of the signals overlap with what you already do. PrimeCitation focuses on the foundational entity and structured data layer that AI-driven search now surfaces. It strengthens and extends what you already deliver."]
-        ].map(faq => (
-          <details class="card-surface group">
-            <summary class="flex items-center justify-between cursor-pointer p-4 text-sm font-semibold text-cream-50">
-              {faq[0]}
+        {faqEntries.map(faq => (
+          <details class="card-surface group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <summary class="flex items-center justify-between cursor-pointer p-4 text-sm font-semibold text-cream-50" itemprop="name">
+              {faq.question}
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-stone-400 group-open:rotate-180 transition-transform"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-4 pb-4 text-sm text-stone-400 leading-relaxed">{faq[1]}</div>
+            <div class="px-4 pb-4 text-sm text-stone-400 leading-relaxed" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+              <span itemprop="text">{faq.answer}</span>
+            </div>
           </details>
         ))}
       </div>
