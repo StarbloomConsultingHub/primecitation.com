@@ -11,10 +11,12 @@ import Layout from '../layouts/Layout.astro';
 >
 
 <!-- ═══ NAV ═══ -->
-<nav class="sticky top-0 z-50 bg-charcoal-900/90 backdrop-blur-lg border-b border-white/5">
-  <div class="container-site flex items-center justify-between h-16">
+<nav class="w-full sticky top-0 z-50 bg-charcoal-900/90 backdrop-blur-lg border-b border-white/5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-4">
     <a href="/" class="flex items-center">
-      <img src="/primecitation-logo.jpg" alt="PrimeCitation" class="h-8 w-auto" />
+      <span class="text-lg font-black tracking-tight" style="font-family: 'DM Sans', sans-serif;">
+        <span class="text-cream-50">Prime</span><span class="text-grad-bronze">Citation</span>
+      </span>
     </a>
     <div class="hidden md:flex items-center gap-8 text-sm font-medium">
       <a href="#how-it-works" class="text-stone-400 hover:text-cream-50 transition-colors">How It Works</a>
@@ -25,9 +27,9 @@ import Layout from '../layouts/Layout.astro';
 </nav>
 
 <!-- ═══ HERO ═══ -->
-<header class="relative overflow-hidden">
+<header class="w-full relative overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-b from-bronze-500/5 via-transparent to-transparent pointer-events-none"></div>
-  <div class="container-site py-24 md:py-32 relative z-10">
+  <div class="max-w-7xl mx-auto py-24 md:py-32 relative z-10 px-4">
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08]" style="font-family: 'DM Sans', sans-serif;">
         Add a premium AEO layer to your existing client work<br />
@@ -51,31 +53,33 @@ import Layout from '../layouts/Layout.astro';
 </header>
 
 <!-- ═══ THE PROBLEM ═══ -->
-<section class="container-site py-20 md:py-28">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6 text-center" style="font-family: 'DM Sans', sans-serif;">
-      You know search is shifting.<br />
-      <span class="text-grad-bronze">You're just not sure how to add AEO</span><br />
-      without creating more problems than you solve.
-    </h2>
-    <div class="text-stone-400 leading-relaxed space-y-4 text-[15px] text-center max-w-3xl mx-auto">
-      <p>Most established SEO agencies face the same situation:</p>
-      <ul class="space-y-3 text-left max-w-lg mx-auto">
-        <li class="flex items-start gap-3"><span class="text-bronze-400 mt-1 flex-shrink-0">&bull;</span> Clients are starting to ask about AI search and &ldquo;being cited by ChatGPT.&rdquo;</li>
-        <li class="flex items-start gap-3"><span class="text-bronze-400 mt-1 flex-shrink-0">&bull;</span> You don&rsquo;t have the time or technical depth to become an AEO expert overnight.</li>
-        <li class="flex items-start gap-3"><span class="text-bronze-400 mt-1 flex-shrink-0">&bull;</span> Most AEO tools and services feel either too basic or too experimental to confidently put in front of long-term clients.</li>
-      </ul>
-      <p>So you do what feels responsible: you focus on the SEO work you already do well and wait for more clarity.</p>
-      <p class="font-semibold text-stone-300">That caution is understandable. It&rsquo;s also starting to create a gap.</p>
+<section class="w-full py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6 text-center" style="font-family: 'DM Sans', sans-serif;">
+        You know search is shifting.<br />
+        <span class="text-grad-bronze">You're just not sure how to add AEO</span><br />
+        without creating more problems than you solve.
+      </h2>
+      <div class="text-stone-400 leading-relaxed space-y-4 text-[15px] text-center max-w-3xl mx-auto">
+        <p>Most established SEO agencies face the same situation:</p>
+        <ul class="space-y-3 text-left max-w-lg mx-auto">
+          <li class="flex items-start gap-3"><span class="text-bronze-400 mt-1 flex-shrink-0">&bull;</span> Clients are starting to ask about AI search and &ldquo;being cited by ChatGPT.&rdquo;</li>
+          <li class="flex items-start gap-3"><span class="text-bronze-400 mt-1 flex-shrink-0">&bull;</span> You don&rsquo;t have the time or technical depth to become an AEO expert overnight.</li>
+          <li class="flex items-start gap-3"><span class="text-bronze-400 mt-1 flex-shrink-0">&bull;</span> Most AEO tools and services feel either too basic or too experimental to confidently put in front of long-term clients.</li>
+        </ul>
+        <p>So you do what feels responsible: you focus on the SEO work you already do well and wait for more clarity.</p>
+        <p class="font-semibold text-stone-300">That caution is understandable. It&rsquo;s also starting to create a gap.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ THE SOLUTION ═══ -->
-<section class="bg-navy-900/30 border-y border-white/5 py-20">
-  <div class="container-site">
+<section class="w-full bg-navy-900/30 border-y border-white/5 py-20">
+  <div class="max-w-7xl mx-auto px-4">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6" style="font-family: 'DM Sans', sans-serif;">
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6 text-center" style="font-family: 'DM Sans', sans-serif;">
         A professional AEO layer<br />
         <span class="text-grad-bronze">that strengthens what you already sell.</span>
       </h2>
@@ -90,40 +94,42 @@ import Layout from '../layouts/Layout.astro';
 </section>
 
 <!-- ═══ HOW IT WORKS ═══ -->
-<section id="how-it-works" class="container-site py-20">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-black text-center tracking-tight mb-4" style="font-family: 'DM Sans', sans-serif;">
-      Simple process. <span class="text-grad-bronze">Professional output.</span>
-    </h2>
-    <p class="text-center text-stone-400 mb-12 text-lg">Designed for agencies.</p>
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="card-surface flex flex-col items-center text-center p-6">
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-bronze-500/20 text-bronze-400 font-black text-lg mb-4">1</span>
-        <h3 class="text-base font-bold mb-2 text-cream-50">You send the website</h3>
-        <p class="text-sm text-stone-400 leading-relaxed">Share the domain of the client you want to support with AEO.</p>
-      </div>
-      <div class="card-surface flex flex-col items-center text-center p-6">
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-bronze-500/20 text-bronze-400 font-black text-lg mb-4">2</span>
-        <h3 class="text-base font-bold mb-2 text-cream-50">We deliver a complete package</h3>
-        <p class="text-sm text-stone-400 leading-relaxed">Clean, unbranded PDF report plus technical assets &mdash; optimized snippets, JSON-LD markup, entity strategy, and implementation guidance.</p>
-      </div>
-      <div class="card-surface flex flex-col items-center text-center p-6">
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-bronze-500/20 text-bronze-400 font-black text-lg mb-4">3</span>
-        <h3 class="text-base font-bold mb-2 text-cream-50">You present it under your brand</h3>
-        <p class="text-sm text-stone-400 leading-relaxed">Add your own strategic recommendations and deliver it to your client. We stay invisible.</p>
-      </div>
-      <div class="card-surface flex flex-col items-center text-center p-6">
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-bronze-500/20 text-bronze-400 font-black text-lg mb-4">4</span>
-        <h3 class="text-base font-bold mb-2 text-cream-50">We support the technical side</h3>
-        <p class="text-sm text-stone-400 leading-relaxed">If questions come up or adjustments are needed, we&rsquo;re available behind the scenes.</p>
+<section id="how-it-works" class="w-full py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-black text-center tracking-tight mb-4" style="font-family: 'DM Sans', sans-serif;">
+        Simple process. <span class="text-grad-bronze">Professional output.</span>
+      </h2>
+      <p class="text-center text-stone-400 mb-12 text-lg">Designed for agencies.</p>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="card-surface flex flex-col items-center text-center p-6">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-bronze-500/20 text-bronze-400 font-black text-lg mb-4">1</span>
+          <h3 class="text-base font-bold mb-2 text-cream-50">You send the website</h3>
+          <p class="text-sm text-stone-400 leading-relaxed">Share the domain of the client you want to support with AEO.</p>
+        </div>
+        <div class="card-surface flex flex-col items-center text-center p-6">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-bronze-500/20 text-bronze-400 font-black text-lg mb-4">2</span>
+          <h3 class="text-base font-bold mb-2 text-cream-50">We deliver a complete package</h3>
+          <p class="text-sm text-stone-400 leading-relaxed">Clean, unbranded PDF report plus technical assets &mdash; optimized snippets, JSON-LD markup, entity strategy, and implementation guidance.</p>
+        </div>
+        <div class="card-surface flex flex-col items-center text-center p-6">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-bronze-500/20 text-bronze-400 font-black text-lg mb-4">3</span>
+          <h3 class="text-base font-bold mb-2 text-cream-50">You present it under your brand</h3>
+          <p class="text-sm text-stone-400 leading-relaxed">Add your own strategic recommendations and deliver it to your client. We stay invisible.</p>
+        </div>
+        <div class="card-surface flex flex-col items-center text-center p-6">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-bronze-500/20 text-bronze-400 font-black text-lg mb-4">4</span>
+          <h3 class="text-base font-bold mb-2 text-cream-50">We support the technical side</h3>
+          <p class="text-sm text-stone-400 leading-relaxed">If questions come up or adjustments are needed, we&rsquo;re available behind the scenes.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ WHAT YOU DELIVER ═══ -->
-<section class="bg-navy-900/30 border-y border-white/5 py-20">
-  <div class="container-site">
+<section class="w-full bg-navy-900/30 border-y border-white/5 py-20">
+  <div class="max-w-7xl mx-auto px-4">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4" style="font-family: 'DM Sans', sans-serif;">
         <span class="text-grad-bronze">Not another surface-level audit.</span>
@@ -152,22 +158,24 @@ import Layout from '../layouts/Layout.astro';
 </section>
 
 <!-- ═══ WHY AGENCIES CHOOSE ═══ -->
-<section id="for-agencies" class="container-site py-20">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-black text-center tracking-tight mb-6" style="font-family: 'DM Sans', sans-serif;">
-      Quality you can stand behind.<br />
-      <span class="text-grad-bronze">Margin you can actually keep.</span>
-    </h2>
-    <div class="text-stone-400 leading-relaxed space-y-4 text-[15px] text-center max-w-3xl mx-auto">
-      <p>We built PrimeCitation for agencies that care about the standard of work they put their name on. Every deliverable is created with the same level of rigor you apply to technical SEO and content strategy.</p>
-      <p>Because we focus only on the foundational layer, you stay in control of the client relationship and the strategic recommendations. This keeps your margins strong and your positioning intact.</p>
+<section id="for-agencies" class="w-full py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-black text-center tracking-tight mb-6" style="font-family: 'DM Sans', sans-serif;">
+        Quality you can stand behind.<br />
+        <span class="text-grad-bronze">Margin you can actually keep.</span>
+      </h2>
+      <div class="text-stone-400 leading-relaxed space-y-4 text-[15px] text-center max-w-3xl mx-auto">
+        <p>We built PrimeCitation for agencies that care about the standard of work they put their name on. Every deliverable is created with the same level of rigor you apply to technical SEO and content strategy.</p>
+        <p>Because we focus only on the foundational layer, you stay in control of the client relationship and the strategic recommendations. This keeps your margins strong and your positioning intact.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ PRICING ═══ -->
-<section id="pricing" class="bg-navy-900/30 border-y border-white/5 py-20">
-  <div class="container-site">
+<section id="pricing" class="w-full bg-navy-900/30 border-y border-white/5 py-20">
+  <div class="max-w-7xl mx-auto px-4">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-black text-center tracking-tight mb-10" style="font-family: 'DM Sans', sans-serif;">
         Straightforward <span class="text-grad-bronze">pricing</span>
@@ -226,29 +234,31 @@ import Layout from '../layouts/Layout.astro';
 </section>
 
 <!-- ═══ TESTIMONIALS (PLACEHOLDER) ═══ -->
-<section class="container-site py-20">
-  <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-3xl font-black tracking-tight mb-12" style="font-family: 'DM Sans', sans-serif;">
-      Trusted by <span class="text-grad-bronze">Growing Agencies</span>
-    </h2>
-    <div class="card-surface p-10">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-bronze-500/30 mx-auto mb-6">
-        <path d="M3 21C3 21 4 12 7 9.5C10 7 12 3 12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M15 21C15 21 16 12 19 9.5C22 7 24 3 24 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      <p class="text-stone-400 italic leading-relaxed mb-6 max-w-lg mx-auto">
-        "PrimeCitation let us add a premium AEO layer to three existing clients in our first month. The reports are thorough enough that our clients think we built the capability in-house."
-      </p>
-      <div class="w-12 h-12 rounded-full bg-charcoal-800 mx-auto mb-3"></div>
-      <p class="text-sm font-semibold text-cream-50">Agency Partner</p>
-      <p class="text-xs text-stone-500">Case study coming soon</p>
+<section class="w-full py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-black tracking-tight mb-12" style="font-family: 'DM Sans', sans-serif;">
+        Trusted by <span class="text-grad-bronze">Growing Agencies</span>
+      </h2>
+      <div class="card-surface p-10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-bronze-500/30 mx-auto mb-6">
+          <path d="M3 21C3 21 4 12 7 9.5C10 7 12 3 12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M15 21C15 21 16 12 19 9.5C22 7 24 3 24 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <p class="text-stone-400 italic leading-relaxed mb-6 max-w-lg mx-auto">
+          "PrimeCitation let us add a premium AEO layer to three existing clients in our first month. The reports are thorough enough that our clients think we built the capability in-house."
+        </p>
+        <div class="w-12 h-12 rounded-full bg-charcoal-800 mx-auto mb-3"></div>
+        <p class="text-sm font-semibold text-cream-50">Agency Partner</p>
+        <p class="text-xs text-stone-500">Case study coming soon</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ FAQ ═══ -->
-<section id="faq" class="bg-navy-900/30 border-y border-white/5 py-20">
-  <div class="container-site">
+<section id="faq" class="w-full bg-navy-900/30 border-y border-white/5 py-20">
+  <div class="max-w-7xl mx-auto px-4">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl font-black text-center tracking-tight mb-12" style="font-family: 'DM Sans', sans-serif;">
         Common <span class="text-grad-bronze">Questions</span>
@@ -276,31 +286,35 @@ import Layout from '../layouts/Layout.astro';
 </section>
 
 <!-- ═══ FINAL CTA ═══ -->
-<section id="contact" class="container-site py-20 md:py-28 text-center">
-  <div class="max-w-3xl mx-auto">
-    <div class="card-surface p-10 glow-bronze">
-      <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4" style="font-family: 'DM Sans', sans-serif;">
-        Stop watching the shift.<br />
-        <span class="text-grad-bronze">Start leading it for your clients.</span>
-      </h2>
-      <p class="text-stone-400 max-w-lg mx-auto mb-8 leading-relaxed">
-        You don&rsquo;t need to become an AEO expert. You need access to one that meets
-        the standard your clients expect from you. PrimeCitation gives you that access &mdash;
-        white-labeled, professionally executed, and designed to complement the SEO work you already deliver.
-      </p>
-      <a href="https://checkout.stripe.com/c/pay/cs_live_a10GuCCp7E4bjaSCBjqUhUX5zlb3EiuaQOG2n3ZDt529QtJdVEN3gZt4ZH" target="_blank" class="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-bronze-500 text-cream-50 font-bold text-lg hover:bg-bronze-400 transition-all shadow-lg shadow-bronze-500/20">
-        Subscribe &mdash; $997/mo
-      </a>
-      <p class="mt-4 text-xs text-stone-500">Limited spots available at Founders Circle pricing.</p>
+<section id="contact" class="w-full py-20 md:py-28 text-center">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="card-surface p-10 glow-bronze">
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4" style="font-family: 'DM Sans', sans-serif;">
+          Stop watching the shift.<br />
+          <span class="text-grad-bronze">Start leading it for your clients.</span>
+        </h2>
+        <p class="text-stone-400 max-w-lg mx-auto mb-8 leading-relaxed">
+          You don&rsquo;t need to become an AEO expert. You need access to one that meets
+          the standard your clients expect from you. PrimeCitation gives you that access &mdash;
+          white-labeled, professionally executed, and designed to complement the SEO work you already deliver.
+        </p>
+        <a href="https://checkout.stripe.com/c/pay/cs_live_a10GuCCp7E4bjaSCBjqUhUX5zlb3EiuaQOG2n3ZDt529QtJdVEN3gZt4ZH" target="_blank" class="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-bronze-500 text-cream-50 font-bold text-lg hover:bg-bronze-400 transition-all shadow-lg shadow-bronze-500/20">
+          Subscribe &mdash; $997/mo
+        </a>
+        <p class="mt-4 text-xs text-stone-500">Limited spots available at Founders Circle pricing.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ FOOTER ═══ -->
-<footer class="border-t border-white/5 py-10 text-center text-xs text-stone-500">
-  <div class="container-site">
-    <div class="flex justify-center mb-6">
-      <img src="/primecitation-logo.jpg" alt="PrimeCitation" class="h-6 w-auto opacity-70" />
+<footer class="w-full border-t border-white/5 py-10 text-center text-xs text-stone-500">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-center mb-4">
+      <span class="text-base font-black tracking-tight" style="font-family: 'DM Sans', sans-serif;">
+        <span class="text-cream-50">Prime</span><span class="text-grad-bronze">Citation</span>
+      </span>
     </div>
     <div class="flex flex-wrap items-center justify-center gap-6 mb-4 text-sm">
       <a href="/blog" class="text-stone-400 hover:text-cream-50 transition-colors">Blog</a>
