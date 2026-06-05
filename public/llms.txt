@@ -1,0 +1,17 @@
+# Prime Citation — White-Label AEO Reports for Agencies
+
+## Summary
+Prime Citation delivers white-labeled Answer Engine Optimization (AEO) audits so agencies can make their clients citable by AI. 5 reports per month. No overhead. Your brand.
+
+## Pages
+- Homepage: https://primecitation.com/
+- Privacy Policy: https://primecitation.com/privacy
+- Blog: https://primecitation.com/blog
+
+## About
+Prime Citation is an AEO agency service founded by Darren Kelly under Kelly Green Holdings. We run deep technical AEO audits — schema validation, entity coverage mapping, semantic HTML5 structure, competitive benchmarking — and deliver white-label reports that agencies present as their own work.
+
+## Contact
+- Email: hello@primecitation.com
+- GitHub: https://github.com/StarbloomConsultingHub
+- Medium: https://medium.com/@darrenkelly_90696

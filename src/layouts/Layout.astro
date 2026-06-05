@@ -8,7 +8,8 @@ export interface Props {
   canonicalURL?: string;
 }
 
-const { title, description, ogImage = '/og-default.png', canonicalURL } = Astro.props;
+const { title, description, ogImage = '/og-default.jpg', canonicalURL } = Astro.props;
+const siteUrl = canonicalURL ?? Astro.url.href;
 ---
 
 <!doctype html>
@@ -26,11 +27,140 @@ const { title, description, ogImage = '/og-default.png', canonicalURL } = Astro.
     <meta property="og:image" content={`${Astro.site}${ogImage}`} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Prime Citation" />
-    <meta property="og:url" content={canonicalURL ?? Astro.url.href} />
+    <meta property="og:url" content={siteUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | Prime Citation`} />
     <meta name="twitter:description" content={description} />
-    <link rel="canonical" href={canonicalURL ?? Astro.url.href} />
+    <link rel="canonical" href={siteUrl} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Prime Citation",
+      "url": "https://primecitation.com",
+      "description": "White-label AEO audits and reports for agencies. Make your clients citable by AI.",
+      "foundingDate": "2026",
+      "founder": {
+        "@type": "Person",
+        "name": "Darren Kelly",
+        "url": "https://medium.com/@darrenkelly_90696",
+        "sameAs": [
+          "https://github.com/StarbloomConsultingHub",
+          "https://medium.com/@darrenkelly_90696",
+          "https://x.com/Starbloom_AI",
+          "https://www.linkedin.com/company/prime-citation"
+        ]
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@primecitation.com",
+        "contactType": "sales"
+      },
+      "sameAs": [
+        "https://github.com/StarbloomConsultingHub",
+        "https://medium.com/@darrenkelly_90696"
+      ]
+    })} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Prime Citation",
+      "url": "https://primecitation.com",
+      "description": "White-label AEO reports and audits for agencies.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://primecitation.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    })} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Prime Citation AEO Subscription",
+      "description": "Monthly white-label AEO audit reports for agencies. 5 reports per month with strategic recommendations.",
+      "offers": {
+        "@type": "Offer",
+        "price": "797",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-10-31",
+        "availability": "https://schema.org/InStock"
+      }
+    })} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I resell these reports under my own brand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Prime Citation is explicitly designed for agency white-label use. Reports ship clean with no Prime Citation branding in the body."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a full audit cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every report includes: full site crawl, Schema.org JSON-LD audit, entity coverage mapping, semantic HTML5 structure review, Core Web Vitals snapshot, content heading hierarchy analysis, competitive entity benchmarking, and deployable JSON-LD markup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many reports can I get per month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your subscription includes 5 full reports per month. Additional reports are $349 each."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the turnaround time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard turnaround is 48-72 hours from report initiation. Rush delivery (24 hours) is available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after the Founders Circle period?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Founders Circle rate of $797/month is locked through October 2026. After that, standard pricing of $1,399/month applies."
+          }
+        }
+      ]
+    })} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://primecitation.com"
+        }
+      ]
+    })} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Darren Kelly",
+      "description": "Founder and operator behind Prime Citation. 15+ years in operations, process automation, and AI systems. Building practical technology for real businesses.",
+      "url": "https://medium.com/@darrenkelly_90696",
+      "sameAs": [
+        "https://github.com/StarbloomConsultingHub",
+        "https://medium.com/@darrenkelly_90696"
+      ]
+    })} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />

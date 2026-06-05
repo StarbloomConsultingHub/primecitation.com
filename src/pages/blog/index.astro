@@ -1,0 +1,65 @@
+---
+// Prime Citation — Blog / Insights
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Blog & Insights"
+  description="AEO strategy, AI citation tactics, and operational thinking for agencies building citable brands."
+>
+
+<nav class="sticky top-0 z-50 bg-navy-900/90 backdrop-blur-lg border-b border-slate-800/50">
+  <div class="container-site flex items-center justify-between h-16">
+    <a href="/" class="flex items-center gap-2">
+      <span class="text-xl font-black tracking-tight text-white">PRIME</span>
+      <span class="text-xl font-light tracking-tight text-gold-400">Citation</span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="/#how-it-works" class="text-slate-400 hover:text-white transition-colors">How It Works</a>
+      <a href="/#pricing" class="text-slate-400 hover:text-white transition-colors">Pricing</a>
+      <a href="/#faq" class="text-slate-400 hover:text-white transition-colors">FAQ</a>
+      <a href="/#contact" class="px-5 py-2 rounded-xl bg-accent text-white font-semibold hover:bg-accent-dark transition-colors">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<section class="container-site py-20">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-4">
+      Insights & <span class="text-gradient">Operational Thinking</span>
+    </h1>
+    <p class="text-slate-400 text-lg mb-12 max-w-xl">
+      Tactical and strategic thinking about AEO, AI citation, and building systems that earn trust from both machines and humans.
+    </p>
+
+    <!-- Featured Article -->
+    <article class="card-surface p-6 md:p-8 mb-4">
+      <span class="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-2 block">Featured</span>
+      <h2 class="text-xl md:text-2xl font-bold mb-2">
+        <a href="https://medium.com/@darrenkelly_90696/i-gave-my-ai-a-second-brain-that-reads-its-own-dreams-e698149c7b23" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">
+          I Gave My AI a Second Brain That Reads Its Own Dreams
+        </a>
+      </h2>
+      <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+        Building autonomous AI systems that don't just execute tasks but reflect, learn, and improve over time. A behind-the-scenes look at the architecture powering Prime Citation's delivery pipeline.
+      </p>
+      <div class="flex items-center justify-between text-xs text-slate-500">
+        <span>Darren Kelly &middot; Medium</span>
+        <a href="https://medium.com/@darrenkelly_90696/i-gave-my-ai-a-second-brain-that-reads-its-own-dreams-e698149c7b23" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark font-medium">
+          Read on Medium &rarr;
+        </a>
+      </div>
+    </article>
+
+    <p class="text-center text-sm text-slate-500 mt-12">
+      More articles coming soon. <a href="https://medium.com/@darrenkelly_90696" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-dark">Follow on Medium</a> for updates.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="container-site py-10 text-center text-xs text-slate-500">
+  <p>&copy; {new Date().getFullYear()} Prime Citation. A Kelly Green Holdings company. All rights reserved.</p>
+</footer>
+
+</Layout>
