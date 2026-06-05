@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Thank You" description="Your PrimeCitation subscription is confirmed.">
+
+<nav class="sticky top-0 z-50 bg-charcoal-900/90 backdrop-blur-lg border-b border-white/5">
+  <div class="container-site flex items-center h-16">
+    <a href="/" class="flex items-center gap-3">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-bronze-500">
+        <path d="M3 16L9 4L15 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="text-lg font-bold tracking-tight text-cream-50">PrimeCitation</span>
+    </a>
+  </div>
+</nav>
+
+<section class="container-site py-24 md:py-32 text-center">
+  <div class="max-w-lg mx-auto">
+    <div class="w-16 h-16 rounded-full bg-bronze-500/20 flex items-center justify-center mx-auto mb-6">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-bronze-400">
+        <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-black tracking-tight mb-4" style="font-family: 'DM Sans', sans-serif;">
+      Welcome to <span class="text-grad-bronze">PrimeCitation</span>
+    </h1>
+    <p class="text-stone-400 text-lg leading-relaxed mb-4">
+      Your subscription is confirmed. You&rsquo;ll receive an email from us within 24 hours
+      with details on how to submit your first client for audit.
+    </p>
+    <p class="text-stone-500 text-sm">Questions? Email <a href="mailto:hello@primecitation.com" class="text-bronze-400 hover:text-bronze-300">hello@primecitation.com</a></p>
+    <a href="/" class="mt-8 inline-flex items-center justify-center px-6 py-3 rounded-lg border border-stone-600 text-stone-400 font-semibold hover:text-cream-50 hover:border-bronze-500 transition-all text-sm">
+      Back to Home
+    </a>
+  </div>
+</section>
+
+<footer class="border-t border-white/5 py-10 text-center text-xs text-stone-500">
+  <div class="container-site">
+    <p>&copy; {new Date().getFullYear()} PrimeCitation. A Kelly Green Holdings company.</p>
+  </div>
+</footer>
+
+</Layout>
