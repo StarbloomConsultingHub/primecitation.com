@@ -1,30 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #070b14;
-  --color-navy-900: #0a1628;
-  --color-navy-800: #0f2040;
-  --color-navy-700: #142e5c;
-  --color-navy-600: #1a3d78;
+  /* Warm Sovereign Authority Palette */
+  --color-charcoal-950: #111618;
+  --color-charcoal-900: #1C2526;
+  --color-charcoal-800: #2A3435;
+  --color-charcoal-700: #3B4647;
 
-  --color-gold-600: #a67c00;
-  --color-gold-500: #c99500;
-  --color-gold-400: #e6b800;
-  --color-gold-300: #f2cc33;
+  --color-bronze-600: #8B6940;
+  --color-bronze-500: #A67C52;
+  --color-bronze-400: #B89166;
+  --color-bronze-300: #CAA67F;
 
-  --color-slate-50:  #f8fafc;
-  --color-slate-100: #f1f5f9;
-  --color-slate-200: #e2e8f0;
-  --color-slate-300: #cbd5e1;
-  --color-slate-400: #94a3b8;
-  --color-slate-500: #64748b;
-  --color-slate-600: #475569;
-  --color-slate-700: #334155;
-  --color-slate-800: #1e293b;
-  --color-slate-900: #0f172a;
+  --color-gold-500: #C5A26F;
+  --color-gold-400: #D4B48A;
+  --color-gold-300: #E0C9A3;
 
-  --color-accent: #3b82f6;
-  --color-accent-dark: #2563eb;
+  --color-navy-950: #080D16;
+  --color-navy-900: #0F1C2E;
+  --color-navy-800: #162840;
+  --color-navy-700: #1E3554;
+
+  --color-cream-100: #F5F0E6;
+  --color-cream-50: #FAF7F2;
+
+  --color-stone-400: #A6A09A;
+  --color-stone-500: #8A837C;
+  --color-stone-600: #6B6560;
 }
 
 * { box-sizing: border-box; margin: 0; }
@@ -32,15 +34,17 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: var(--color-navy-900);
-  color: var(--color-slate-100);
+  background: var(--color-charcoal-900);
+  color: var(--color-cream-50);
   line-height: 1.6;
 }
 
+/* Container constrained for reading width */
 .container-site {
   width: 100%;
   max-width: 1200px;
@@ -48,29 +52,32 @@ body {
   padding: 0 2rem;
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, var(--color-gold-400), var(--color-gold-300));
+/* Bronze gradient accents */
+.text-grad-bronze {
+  background: linear-gradient(135deg, var(--color-bronze-400), var(--color-gold-400));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* Card surface on dark backgrounds */
 .card-surface {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(166, 154, 138, 0.1);
   border-radius: 1rem;
   backdrop-filter: blur(8px);
 }
 
-.glow-border {
+/* Subtle bronze glow for premium elements */
+.glow-bronze {
   position: relative;
 }
 
-.glow-border::before {
+.glow-bronze::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(201, 149, 0, 0.2));
+  background: linear-gradient(135deg, rgba(166, 124, 82, 0.2), rgba(197, 162, 111, 0.1));
   z-index: -1;
 }

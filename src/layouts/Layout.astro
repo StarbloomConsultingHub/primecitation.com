@@ -33,6 +33,11 @@ const siteUrl = canonicalURL ?? Astro.url.href;
     <meta name="twitter:description" content={description} />
     <link rel="canonical" href={siteUrl} />
 
+    <!-- Fonts: Inter (body) + DM Sans (headings - free alternative to Satoshi) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -43,14 +48,7 @@ const siteUrl = canonicalURL ?? Astro.url.href;
       "foundingDate": "2026",
       "founder": {
         "@type": "Person",
-        "name": "Darren Kelly",
-        "url": "https://medium.com/@darrenkelly_90696",
-        "sameAs": [
-          "https://github.com/StarbloomConsultingHub",
-          "https://medium.com/@darrenkelly_90696",
-          "https://x.com/Starbloom_AI",
-          "https://www.linkedin.com/company/prime-citation"
-        ]
+        "name": "Darren Kelly"
       },
       "contactPoint": {
         "@type": "ContactPoint",
@@ -67,20 +65,14 @@ const siteUrl = canonicalURL ?? Astro.url.href;
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Prime Citation",
-      "url": "https://primecitation.com",
-      "description": "White-label AEO reports and audits for agencies.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://primecitation.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "url": "https://primecitation.com"
     })} />
 
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Prime Citation AEO Subscription",
-      "description": "Monthly white-label AEO audit reports for agencies. 5 reports per month with strategic recommendations.",
+      "description": "Monthly white-label AEO audit reports for agencies. 5 reports per month.",
       "offers": {
         "@type": "Offer",
         "price": "797",
@@ -89,81 +81,6 @@ const siteUrl = canonicalURL ?? Astro.url.href;
         "availability": "https://schema.org/InStock"
       }
     })} />
-
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I resell these reports under my own brand?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Prime Citation is explicitly designed for agency white-label use. Reports ship clean with no Prime Citation branding in the body."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does a full audit cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every report includes: full site crawl, Schema.org JSON-LD audit, entity coverage mapping, semantic HTML5 structure review, Core Web Vitals snapshot, content heading hierarchy analysis, competitive entity benchmarking, and deployable JSON-LD markup."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many reports can I get per month?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Your subscription includes 5 full reports per month. Additional reports are $349 each."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's the turnaround time?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard turnaround is 48-72 hours from report initiation. Rush delivery (24 hours) is available."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens after the Founders Circle period?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Founders Circle rate of $797/month is locked through October 2026. After that, standard pricing of $1,399/month applies."
-          }
-        }
-      ]
-    })} />
-
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://primecitation.com"
-        }
-      ]
-    })} />
-
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Darren Kelly",
-      "description": "Founder and operator behind Prime Citation. 15+ years in operations, process automation, and AI systems. Building practical technology for real businesses.",
-      "url": "https://medium.com/@darrenkelly_90696",
-      "sameAs": [
-        "https://github.com/StarbloomConsultingHub",
-        "https://medium.com/@darrenkelly_90696"
-      ]
-    })} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   </head>
   <body>
     <slot />
