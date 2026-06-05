@@ -1,0 +1,5 @@
+# Prime Citation
+User-agent: *
+Allow: /
+
+Sitemap: https://primecitation.com/sitemap-index.xml
