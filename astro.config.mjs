@@ -4,7 +4,7 @@ import vercel from '@astrojs/vercel';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://primecitation.com',
+  site: 'https://www.primecitation.com',
   output: 'server',
   adapter: vercel(),
   integrations: [sitemap()],
