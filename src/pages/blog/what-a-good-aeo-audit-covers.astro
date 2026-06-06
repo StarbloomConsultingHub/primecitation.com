@@ -1,0 +1,227 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogFooter from '../../components/BlogFooter.astro';
+---
+
+<Layout
+  title="What a Good AEO Audit Actually Covers"
+  description="A breakdown of the eight dimensions a proper Answer Engine Optimization audit should address, from entity coverage to content hierarchy."
+>
+
+<nav class="sticky top-0 z-50 bg-navy-900/90 backdrop-blur-lg border-b border-slate-800/50">
+  <div class="container-site flex items-center justify-between h-16 px-4">
+    <a href="/" class="flex items-center gap-2">
+      <span class="text-xl font-black tracking-tight text-white">PRIME</span>
+      <span class="text-xl font-light tracking-tight text-gold-400">Citation</span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="/blog" class="text-slate-400 hover:text-white transition-colors">Blog</a>
+      <a href="/#how-it-works" class="text-slate-400 hover:text-white transition-colors">How It Works</a>
+      <a href="/#pricing" class="text-slate-400 hover:text-white transition-colors">Pricing</a>
+    </div>
+  </div>
+</nav>
+
+<article class="container-site py-20 px-4">
+  <div class="max-w-3xl mx-auto">
+
+    <!-- Header -->
+    <div class="mb-12">
+      <span class="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-3 block">AEO Foundations</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-4">
+        What a Good AEO Audit<br />
+        <span class="text-gradient">Actually Covers</span>
+      </h1>
+      <div class="flex items-center gap-3 text-sm text-slate-500">
+        <span>Darren Kelly</span>
+        <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+        <span>June 5, 2026</span>
+        <span class="w-1 h-1 rounded-full bg-slate-600"></span>
+        <span>8 min read</span>
+      </div>
+    </div>
+
+    <!-- Intro -->
+    <p class="text-lg text-slate-300 leading-relaxed mb-6">
+      Answer Engine Optimization is still new enough that most agencies are figuring out what a good audit looks like.
+      Some tools check if your Schema validates. Some check if your site loads fast. A few check if ChatGPT can find you.
+    </p>
+
+    <p class="text-lg text-slate-300 leading-relaxed mb-6">
+      A real AEO audit is broader than any of those. It covers the full set of signals that determine whether an AI system<br />
+      can find your client, understand what they do, and decide they are worth citing as a source.
+    </p>
+
+    <p class="text-lg text-slate-300 leading-relaxed mb-8">
+      Here is what that actually looks like broken down into the eight dimensions we check on every engagement.
+    </p>
+
+    <hr class="border-slate-800 my-10" />
+
+    <!-- 1 -->
+    <h2 class="text-2xl font-bold text-white mb-3">1. Full Site Crawl and Technical Issue Scan</h2>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      Before you can optimize anything for AI citation, the site needs to be crawlable and indexable. We run a comprehensive scan covering:
+    </p>
+    <ul class="space-y-2 text-slate-300 mb-8 pl-5">
+      <li class="list-disc">Crawlability blockers: robots.txt misconfigurations, noindex tags, redirect chains</li>
+      <li class="list-disc">Index coverage: pages Google and other engines can actually reach</li>
+      <li class="list-disc">Response status health: 4xx and 5xx errors that waste crawl budget</li>
+      <li class="list-disc">Internal linking structure: whether entity authority flows through the site correctly</li>
+      <li class="list-disc">XML sitemap accuracy: whether the sitemap reflects the actual live site</li>
+    </ul>
+    <p class="text-slate-300 leading-relaxed mb-10">
+      If a crawler cannot reach the content, no amount of optimization matters. This is the baseline that everything else builds on.
+    </p>
+
+    <!-- 2 -->
+    <h2 class="text-2xl font-bold text-white mb-3">2. Schema.org JSON-LD Audit Across All Relevant Entity Types</h2>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      Structured data is how you tell machines what things mean. We audit every<script type="application/ld+json"> block on the site for:
+    </p>
+    <ul class="space-y-2 text-slate-300 mb-8 pl-5">
+      <li class="list-disc">Correct entity typing: is the Organization block complete? Does it have the right entity type or a generic one?</li>
+      <li class="list-disc">Required vs. recommended properties: missing fields that reduce the entity's resolution quality</li>
+      <li class="list-disc">Schema validation errors: markup that passes Google's validator but misrepresents the entity</li>
+      <li class="list-disc">Entity type coverage: which schema.org types are present (Organization, Person, Product, FAQ, LocalBusiness, Article, etc.) and which are missing</li>
+      <li class="list-disc">SameAs completeness: whether external entity profiles (LinkedIn, Crunchbase, Wikidata, GitHub, Medium) are linked</li>
+    </ul>
+    <p class="text-slate-300 leading-relaxed mb-10">
+      Most sites have some structured data. Few have it configured in a way that AI systems can use for entity resolution.
+    </p>
+
+    <!-- 3 -->
+    <h2 class="text-2xl font-bold text-white mb-3">3. Entity Coverage Mapping</h2>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      This is where AEO diverges most from traditional SEO. Entity coverage is not about keywords. It is about whether the important things your client does are represented as identifiable entities in the search ecosystem.
+    </p>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      We map:
+    </p>
+    <ul class="space-y-2 text-slate-300 mb-8 pl-5">
+      <li class="list-disc">The organization entity: is it findable on Wikidata, Crunchbase, LinkedIn, Google Business Profile?</li>
+      <li class="list-disc">The founder or leadership entity: does the person have a resolvable digital identity?</li>
+      <li class="list-disc">Product and service entities: are individual offerings expressed as distinct entities with their own structured data?</li>
+      <li class="list-disc">Competitor entity landscape: what entities are competitors resolving that you are not?</li>
+    </ul>
+    <p class="text-slate-300 leading-relaxed mb-10">
+      AI citation relies on entity resolution. If your client does not exist as an entity, they cannot be cited as one.
+    </p>
+
+    <!-- 4 -->
+    <h2 class="text-2xl font-bold text-white mb-3">4. Semantic HTML5 and Heading Structure Review</h2>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      AI systems parse the semantic structure of a page, not just its text. We review:
+    </p>
+    <ul class="space-y-2 text-slate-300 mb-8 pl-5">
+      <li class="list-disc">Heading hierarchy: whether H1 through H6 tags create a logical content outline</li>
+      <li class="list-disc">Semantic HTML5 elements: proper use of <code class="text-gold-400">&lt;article&gt;</code>, <code class="text-gold-400">&lt;section&gt;</code>, <code class="text-gold-400">&lt;header&gt;</code>, <code class="text-gold-400">&lt;nav&gt;</code>, <code class="text-gold-400">&lt;main&gt;</code>, <code class="text-gold-400">&lt;aside&gt;</code> landmarks</li>
+      <li class="list-disc">Content chunking: whether topical shifts are properly enclosed in semantic containers</li>
+      <li class="list-disc">Table and list markup: whether tabular data is marked as tables or just visual layouts</li>
+    </ul>
+    <p class="text-slate-300 leading-relaxed mb-10">
+      Clean semantics tells an AI parser what each block of content means. Div soup tells it nothing.
+    </p>
+
+    <!-- 5 -->
+    <h2 class="text-2xl font-bold text-white mb-3">5. Core Web Vitals Snapshot</h2>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      Loading performance is not specifically an AEO signal, but it is an accessibility signal. AI systems prefer sources that load reliably, just as users do.
+    </p>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      We check Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift against the Google-recommended thresholds. If any metric is failing, we flag the specific resource or pattern causing the issue and recommend a fix.
+    </p>
+    <p class="text-slate-300 leading-relaxed mb-10">
+      This is not the highest priority dimension for AEO, but poor Core Web Vitals can cause an AI system to skip a page in favor of a faster-loading alternative.
+    </p>
+
+    <!-- 6 -->
+    <h2 class="text-2xl font-bold text-white mb-3">6. Content Hierarchy and Topical Alignment</h2>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      AI citation favors content that covers a topic comprehensively and demonstrates topical authority. We evaluate:
+    </p>
+    <ul class="space-y-2 text-slate-300 mb-8 pl-5">
+      <li class="list-disc">Topic clusters: whether content covers a subject broadly or just scratches the surface</li>
+      <li class="list-disc">Information gain: whether individual pages offer depth or repeat what is already common knowledge</li>
+      <li class="list-disc">Internal topical linking: whether related content is connected in a way that builds subject authority</li>
+      <li class="list-disc">Freshness signals: whether content is maintained or left to stagnate</li>
+    </ul>
+    <p class="text-slate-300 leading-relaxed mb-10">
+      AI systems evaluate topical breadth and depth. A single strong page is good. A cluster of related pages that interlink and cover a topic from multiple angles is better.
+    </p>
+
+    <!-- 7 -->
+    <h2 class="text-2xl font-bold text-white mb-3">7. Competitive Entity Benchmarking</h2>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      You cannot know whether your entity coverage is sufficient without comparing it to the field. We identify your client's top three to five competitors and benchmark:
+    </p>
+    <ul class="space-y-2 text-slate-300 mb-8 pl-5">
+      <li class="list-disc">Their entity footprint: which entity platforms they appear on that your client does not</li>
+      <li class="list-disc">Their structured data depth: whether their Schema markup is more complete</li>
+      <li class="list-disc">Their content authority: whether they have stronger topical coverage in key areas</li>
+      <li class="list-disc">Their citation frequency: how often they are referenced by AI systems in relevant contexts</li>
+    </ul>
+    <p class="text-slate-300 leading-relaxed mb-10">
+      This benchmarking defines the gap. Without it, you are optimizing blind.
+    </p>
+
+    <!-- 8 -->
+    <h2 class="text-2xl font-bold text-white mb-3">8. Deployable Assets</h2>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      A good audit does not just identify problems. It gives you something to deploy. Every Prime Citation engagement delivers:
+    </p>
+    <ul class="space-y-2 text-slate-300 mb-8 pl-5">
+      <li class="list-disc">Ready-to-deploy JSON-LD markup for all relevant entity types, formatted and validated</li>
+      <li class="list-disc">Prioritized content briefs that address the biggest entity coverage and topical gaps</li>
+      <li class="list-disc">Technical fixes documented in a format your dev team can execute without interpretation</li>
+      <li class="list-disc">Entity platform profiles to create or update with exact text for each field</li>
+    </ul>
+    <p class="text-slate-300 leading-relaxed mb-10">
+      The deliverable is not a report that sits in a drawer. It is a set of assets you can deploy immediately.
+    </p>
+
+    <hr class="border-slate-800 my-10" />
+
+    <!-- Closing -->
+    <h2 class="text-2xl font-bold text-white mb-3">The Difference Between a Checklist and a Foundation</h2>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      Most AEO checklists floating around right now focus on one or two dimensions. "Add FAQ schema." "Fix your page speed." "Write better meta descriptions." These are fine but they treat AEO as a tactical overlay on top of existing SEO.
+    </p>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      A real AEO audit treats entity establishment as the foundation. Everything else stands on top of that. If the AI cannot resolve who your client is and what they do, no amount of Schema tweaking or content polishing will earn consistent citations.
+    </p>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      The eight dimensions above cover that foundation. They are the difference between a site that occasionally gets cited by accident and a site that AI systems consistently recognize as an authoritative source.
+    </p>
+    <p class="text-slate-300 leading-relaxed mb-6">
+      That is what a good AEO audit actually covers.
+    </p>
+
+    <hr class="border-slate-800 my-10" />
+
+    <!-- CTA -->
+    <div class="card-surface p-6 md:p-8 text-center mb-8">
+      <h3 class="text-lg font-bold text-white mb-3">Need a real AEO audit for your agency's clients?</h3>
+      <p class="text-sm text-slate-400 mb-5 max-w-md mx-auto leading-relaxed">
+        Prime Citation delivers white-label reports covering all eight dimensions. Clean, unbranded, and deployable under your agency's name.
+      </p>
+      <a href="https://checkout.stripe.com/c/pay/cs_live_a10GuCCp7E4bjaSCBjqUhUX5zlb3EiuaQOG2n3ZDt529QtJdVEN3gZt4ZH" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-accent-dark transition-colors text-sm">
+        Subscribe &mdash; $997/mo
+      </a>
+      <p class="text-xs text-slate-500 mt-3">Founders Circle rate available for the first 15 agencies.</p>
+    </div>
+
+  </div>
+</article>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="container-site py-10 text-center text-xs text-slate-500 border-t border-slate-800">
+  <div class="flex flex-wrap items-center justify-center gap-6 mb-4 text-sm">
+    <a href="/blog" class="text-slate-400 hover:text-white transition-colors">Blog</a>
+    <a href="/privacy" class="text-slate-400 hover:text-white transition-colors">Privacy</a>
+    <a href="https://medium.com/@darrenkelly_90696" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">Medium</a>
+  </div>
+  <p>&copy; {new Date().getFullYear()} Prime Citation. A Kelly Green Holdings company.</p>
+</footer>
+
+</Layout>
