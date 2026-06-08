@@ -111,6 +111,49 @@ const siteUrl = canonicalURL ?? Astro.url.href;
       }
     })} />
 
+    <!-- Person (Darren Kelly — founder) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Darren Kelly",
+      "givenName": "Darren",
+      "familyName": "Kelly",
+      "jobTitle": "Founder & Systems Architect",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Prime Citation",
+        "url": "https://www.primecitation.com"
+      },
+      "url": "https://www.primecitation.com",
+      "sameAs": [
+        "https://github.com/StarbloomConsultingHub",
+        "https://medium.com/@darrenkelly_90696",
+        "https://x.com/Starbloom_AI"
+      ],
+      "knowsAbout": [
+        "Answer Engine Optimization",
+        "Structured Data",
+        "Semantic SEO",
+        "Entity Linking",
+        "Systems Architecture"
+      ],
+      "description": "Darren Kelly is a systems architect and the founder of PrimeCitation. Before focusing on Answer Engine Optimization, he spent years designing operational systems in demanding production environments where reliability was non-negotiable."
+    })} />
+
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.primecitation.com/"
+        }
+      ]
+    })} />
+
     <!-- FAQPage (injected per-page via faq prop) -->
     {faq && faq.length > 0 && (
       <script type="application/ld+json" set:html={JSON.stringify({
